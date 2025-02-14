@@ -5,39 +5,64 @@
 </head>
  
 <body>
-	<a href="index.php">Go to Home</a>
-	<br/><br/>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand px-5" href="Index.php">Website XI TKJ</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="index.php">Home<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="add.php">Add</a>
+        </li>
+</ul>
+    </div>
+    </nav>
     
 	<div class="href-target" id="input-types">
-		<h1>Add New User Form</h1>
+		<h1 class="text-center py-3">Add New User Form</h1>
+		
 
 		<form action="add.php" method="post" name="form1">
-			<table width="25%" border="0">
-				<tr> 
-					<td>Name</td>
-					<td><input type="text" name="name"></td>
-				</tr>
-				<tr> 
-					<td>Email</td>
-					<td><input type="text" name="email"></td>
-				</tr>
-				<tr> 
-					<td>mobile</td>
-					<td><input type="text" name="mobile"></td>
-				</tr>
+	         <div class="form-group px-5">
+                  <label for="examplelnputName">full name</label>
+				  <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="Enter your full name">
+             </div>
 
-				<tr>
-					<td>foto</td>
-					<td><input type="file" name="foto" id="foto"></td>
-				</tr> 
+             <div class="form-group px-5">
+                  <label for="examplelnputEmail">Email Address</label>
+				  <input type="text" Email="Email" class="form-control" id="exampleInputEmail" placeholder="Enter your Email Address">
+             </div>
 
-				<tr> 
-					<td></td>
-					<td><input type="submit" name="Submit" value="Add" class="btn btn-outline-warning"></td>
-				</tr>
-			</table>
+			 <div class="form-group px-5">
+                  <label for="examplelnputName">Phone number</label>
+				  <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="Enter your phone number">
+				 </div>
+
+				 <div class="form-group px-5">
+                  <label for="examplelnputName">Upload your foto</label>
+				  <input type="text" name="foto" class="form-control" id="exampleInputName" placeholder="Enter your full foto">
+				 </div>	 
+				 
+				 <div class="form-group px-5">
+					  <Input type="submit"name="submit" value="Add" class="btn ntn-outline-primary">
+
+			 <div class="form-group">
+				<label 
+				for="exampleFormControlFile">Upload Your Photos/label><input type="file"class="form-control-file"id="exampleFormControlFile"name="foto">
+             </div>
+
+             <div class="form-group">
+				<input type="submit"name="submit" value="Add" class="btn btn-outline-primary"> 
+             </div>	
+			
 		</form>
-	</
+      </div>
 	<?php
  
 	// Check If form submitted, insert form data into users table.
